@@ -1,5 +1,3 @@
-name: Build and push "dev" images
-
 on: 
   #repository_dispatch:
   push:
