@@ -25,12 +25,6 @@ COPY library-scripts/node-debian.sh /tmp/library-scripts/
 RUN if [ "$INSTALL_NODE" = "true" ]; then bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}" "${NODE_VERSION}" "${USERNAME}"; fi \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
-# [Option] Install Azure CLI
-ARG INSTALL_AZURE_CLI="false"
-COPY library-scripts/azcli-debian.sh /tmp/library-scripts/
-RUN if [ "$INSTALL_AZURE_CLI" = "true" ]; then bash /tmp/library-scripts/azcli-debian.sh; fi \
-    && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
-
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
