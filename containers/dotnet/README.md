@@ -14,8 +14,6 @@
 | *Container host OS support*       | Linux         |
 | *Languages, platforms*            | .NET Core, C# |
 
-## Using this definition with an existing folder
-
 Based on <https://github.com/microsoft/vscode-dev-containers/tree/master/containers/dotnetcore>
 
 ## Description
@@ -30,4 +28,4 @@ Based on <https://github.com/microsoft/vscode-dev-containers/tree/master/contain
 
 ## Build
 
-* `docker build --pull --rm -f "containers/nikiforovall-dotnet/.devcontainer/base.Dockerfile" -t dotnet-dev-containers:0.1.0 "containers/nikiforovall-dotnet/.devcontainer"`
+* `docker build --pull --rm -f "containers/dotnet/.devcontainer/base.Dockerfile" -t devcontainers/dotnet:x.y.z containers/dotnet/.devcontainer`

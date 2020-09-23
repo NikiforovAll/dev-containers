@@ -14,3 +14,14 @@
 | *Works in Codespaces*             | Yes                                                    |
 | *Container host OS support*       | Linux, macOS, Windows                                  |
 | *Languages, platforms*            | Node.js, JavaScript                                    |
+
+## Description
+
+* node:${VARIANT}
+* `common-debian.sh`
+* GIT: containers automatically copy your local .gitconfig
+* dotfile personalization
+
+## Build
+
+* `docker build --pull --rm -f "containers/angular/.devcontainer/base.Dockerfile" -t devcontainers/angular:x.y.z containers/angular/.devcontainer`
