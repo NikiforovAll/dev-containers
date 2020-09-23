@@ -10,6 +10,36 @@ Summary: .NET Core SDK, zsh + oh-my-zsh / bash.
 
 Please see: [dotnet/README.md](./containers/dotnet/README.md)
 
+```jsonc
+    {
+        "name": "NikiforovAll: .NET Core dev-container",
+        "image": "devcontainers/angular:0.6.0",
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/zsh"
+        },
+    }
+```
+
+## Angular dev-container 📦
+
+Summary: Nodejs, Typescript, Angular, zsh + oh-my-zsh / bash.
+
+Please see: [dotnet/README.md](./containers/nikiforovall-angular/README.md)
+
+```json
+    {
+        "name": "NikiforovAll: .NET Core dev-container",
+        "image": "devcontainers/angular:0.1.0",
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/zsh"
+        },
+    }
+```
+
+## Dotfiles
+
+Containers above provide basis and dependencies for dotfiles [nikiforovall/dotfiles](https://github.com/NikiforovAll/dotfiles.git)
+
 ## License
 
 Licensed under the MIT License. See [LICENSE](./LICENSE)
