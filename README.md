@@ -28,7 +28,7 @@ Please see: [dotnet/README.md](./containers/nikiforovall-angular/README.md)
 
 ```json
     {
-        "name": "NikiforovAll: .NET Core dev-container",
+        "name": "NikiforovAll: Angular dev-container",
         "image": "devcontainers/angular:0.1.0",
         "settings": {
             "terminal.integrated.shell.linux": "/bin/zsh"
