@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Build dotnet
         run: |
-          docker build -f ./base.Dockerfile ./containers/dotnet/.devcontainer
+          docker build -f ./containers/dotnet/base.Dockerfile ./containers/dotnet/.devcontainer
       - name: Build angular
         run: |
-          docker build -f ./base.Dockerfile ./containers/angular/.devcontainer
+          docker build -f ./containers/angular/base.Dockerfile ./containers/angular/.devcontainer
       # - name: Push to GitHub Packages
       #   uses: docker/build-push-action@v1
       #   with:
