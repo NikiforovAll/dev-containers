@@ -3,7 +3,7 @@ on:
   push:
     branches: [master]
     paths:
-      - 'containers/dotnetcore/**'
+      - 'containers/**'
 
 jobs:
   build:
