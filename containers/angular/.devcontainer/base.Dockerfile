@@ -27,9 +27,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get purge -y imagemagick imagemagick-6-common \
     # Install common packages, non-root user, update yarn and install nvm
     && bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" \
-    # Install yarn, nvm
-    && rm -rf /opt/yarn-* /usr/local/bin/yarn /usr/local/bin/yarnpkg \
-    && bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}" "none" "${USERNAME}" \
     # Clean up
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /root/.gnupg /tmp/library-scripts
 
@@ -53,12 +50,9 @@ RUN mkdir -p ${NPM_GLOBAL} \
     | tee -a /etc/bash.bashrc >> /etc/zsh/zshrc
 
 # Install eslint
-RUN sudo -u ${USERNAME} npm install -g eslint \
-    && npm cache clean --force > /dev/null 2>&1
+# ARG USERNAME=node
 
-ARG USERNAME=node
-
-RUN sudo -u ${USERNAME} npm install -g tslint typescript \
+RUN sudo -u ${USERNAME} npm install -g eslint typescript @angular/cli\
     && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.
@@ -70,4 +64,4 @@ RUN sudo -u ${USERNAME} npm install -g tslint typescript \
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
 
 # [Optional] Uncomment this line to install global node packages.
-RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g @angular/cli" 2>&1
+# RUN sudo -u ${USERNAME} -c "source /usr/local/share/nvm/nvm.sh && npm install <name>" 2>&1
