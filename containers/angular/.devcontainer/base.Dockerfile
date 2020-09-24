@@ -55,6 +55,12 @@ RUN mkdir -p ${NPM_GLOBAL} \
 RUN sudo -u ${USERNAME} npm install -g eslint typescript @angular/cli\
     && npm cache clean --force > /dev/null 2>&1
 
+# Test Angular
+RUN apt-get update && apt-get install -y xvfb chromium
+ADD ./library-scripts/xvfb-chromium /usr/bin/xvfb-chromium
+RUN ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome
+RUN ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser
+
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
@@ -65,3 +71,5 @@ RUN sudo -u ${USERNAME} npm install -g eslint typescript @angular/cli\
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN sudo -u ${USERNAME} -c "source /usr/local/share/nvm/nvm.sh && npm install <name>" 2>&1
+
+EXPOSE 4200/tcp

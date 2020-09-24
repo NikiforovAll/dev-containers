@@ -8,12 +8,12 @@
 
 Summary: .NET Core SDK, zsh + oh-my-zsh / bash.
 
-Please see: [dotnet/README.md](./containers/dotnet/README.md)
+Please see: [dotnet/README.md](https://github.com/NikiforovAll/dev-containers/tree/master/containers/dotnet)
 
-```jsonc
+```json
     {
         "name": "NikiforovAll: .NET Core dev-container",
-        "image": "devcontainers/angular:0.6.0",
+        "image": "ghcr.io/nikiforovall/devcontainers/angular:0.6.0",
         "settings": {
             "terminal.integrated.shell.linux": "/bin/zsh"
         },
@@ -24,12 +24,12 @@ Please see: [dotnet/README.md](./containers/dotnet/README.md)
 
 Summary: Nodejs, Typescript, Angular, zsh + oh-my-zsh / bash.
 
-Please see: [dotnet/README.md](./containers/nikiforovall-angular/README.md)
+Please see: [angular/README.md](https://github.com/NikiforovAll/dev-containers/tree/master/containers/angular)
 
 ```json
     {
         "name": "NikiforovAll: Angular dev-container",
-        "image": "devcontainers/angular:0.1.0",
+        "image": "ghcr.io/nikiforovall/devcontainers/angular:0.3.0",
         "settings": {
             "terminal.integrated.shell.linux": "/bin/zsh"
         },

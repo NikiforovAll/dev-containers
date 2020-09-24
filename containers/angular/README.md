@@ -25,3 +25,6 @@
 ## Build
 
 * `docker build --pull --rm -f "containers/angular/.devcontainer/base.Dockerfile" -t devcontainers/angular:x.y.z containers/angular/.devcontainer`
+
+TODO: add support for Karma <https://hub.docker.com/r/markadams/chromium-xvfb>
+TODO: investigate why performance for wsl2 is so slow and try if it will not occur on other setup
