@@ -18,6 +18,9 @@ jobs:
       - name: Build angular
         run: |
           docker build -f ./containers/angular/.devcontainer/base.Dockerfile ./containers/angular/.devcontainer
+      - name: Build exercism
+        run: |
+          docker build -f ./containers/angular/.devcontainer/Dockerfile ./containers/angular/.devcontainer
       # - name: Push to GitHub Packages
       #   uses: docker/build-push-action@v1
       #   with:

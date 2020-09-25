@@ -1,0 +1,35 @@
+
+{
+	"name": "NikiforovAll: Exercism",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+		}
+	},
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		// "terminal.integrated.shell.linux": "/bin/bash"
+		"terminal.integrated.shell.linux": "/bin/zsh"
+		// "terminal.integrated.shell.linux": "/bin/sh"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		// dotnet
+		"ms-dotnettools.csharp",
+		"formulahendry.dotnet-test-explorer",
+		"nikiforovall.surround-with-csharp",
+		"eamodio.gitlens",
+		// MISC
+		"k--kato.docomment",
+		"yzhang.markdown-all-in-one",
+		"editorconfig.editorconfig",
+		"naumovs.trailing-semicolon",
+		// prolog
+		// "arthurwang.vsc-prolog"
+	],
+	"postCreateCommand": "dotnet restore",
+	"workspaceFolder": "/home/vscode/exercism",
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/home/vscode/exercism,type=bind,consistency=cached",
+	// ! Not supported, KNOWN_ISSUE
+	// "remoteUser": ""
+}
