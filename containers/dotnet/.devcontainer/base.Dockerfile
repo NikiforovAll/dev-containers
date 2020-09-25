@@ -27,6 +27,7 @@ RUN bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "$
 # TODO: make sure that dotfiles could be installed both for root and vscode user
 
 COPY library-scripts/common-cli.sh /tmp/library-scripts/
+COPY lib/fd_8.1.1_amd64.deb /tmp/library-scripts
 RUN apt-get update \
     # Use Docker script from script library to set things up
     && /bin/bash /tmp/library-scripts/common-cli.sh "${INSTALL_ZSH}" \
@@ -54,7 +55,7 @@ ENV NVM_DIR=/usr/local/share/nvm
 ENV NVM_SYMLINK_CURRENT=true \
     PATH=${NVM_DIR}/current/bin:${PATH}
 COPY library-scripts/node-debian.sh /tmp/library-scripts/
-RUN RUN if [ "${INSTALL_NODE}" = "true" ]; then apt-get update && bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}"; fi
+RUN if [ "${INSTALL_NODE}" = "true" ]; then apt-get update && bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}"; fi
 
 # [Option] Install Azure CLI
 ARG INSTALL_AZURE_CLI="false"

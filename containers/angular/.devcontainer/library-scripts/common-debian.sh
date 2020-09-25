@@ -280,6 +280,8 @@ install-oh-my()
         # config option fixes line CRLF line endings (<./<file> xxd -p -c1 | grep -n '0[da]' | sort | uniq)
         git clone -c core.autocrlf=input https://github.com/zsh-users/zsh-syntax-highlighting.git \
             ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+        git clone -c core.autocrlf=input https://github.com/zsh-users/zsh-autosuggestions  \
+            ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
         # ! CUSTOM ADDITIONS (END)
     fi
     # Shrink git while still enabling updates

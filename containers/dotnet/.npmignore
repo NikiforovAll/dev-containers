@@ -7,5 +7,6 @@ definition-manifest.json
 .devcontainer/library-scripts/azcli-debian.sh
 .devcontainer/library-scripts/node-debian.sh
 .devcontainer/library-scripts/common-cli.sh
+.devcontainer/lib/
 .vscode
 .npmignore

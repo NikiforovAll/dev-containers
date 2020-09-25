@@ -38,7 +38,23 @@ Please see: [angular/README.md](https://github.com/NikiforovAll/dev-containers/t
 
 ## Dotfiles
 
-Containers above provide basis and dependencies for dotfiles [nikiforovall/dotfiles](https://github.com/NikiforovAll/dotfiles.git)
+Containers above provide basis and dependencies for dotfiles [nikiforovall/dotfiles](https://github.com/NikiforovAll/dotfiles/tree/master/src/dev-container)
+
+## Highlights
+
+* Every container is based on common setup that includes:
+  * themed bash, zsh. This depends on dotfiles.
+  * fzf ⭐
+  * fd
+  * silversearcher-ag, could be invoked as ag.
+  * lnav
+  * exa, aliased as ll.
+
+If you use my dotfiles, please see <https://github.com/NikiforovAll/dotfiles/tree/master/src/dev-container/shell> for more details.
+
+## Known issues
+
+* exa requires locale, but dev container doesn't have it. "Unable to determine time zone: No such file or directory (os error 2)"
 
 ## License
 

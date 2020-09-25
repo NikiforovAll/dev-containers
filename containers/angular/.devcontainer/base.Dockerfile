@@ -33,6 +33,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # CLI
 
 COPY library-scripts/common-cli.sh /tmp/library-scripts/
+COPY lib/fd_8.1.1_amd64.deb /tmp/library-scripts
+
 RUN apt-get update \
     # Use Docker script from script library to set things up
     && /bin/bash /tmp/library-scripts/common-cli.sh "${INSTALL_ZSH}" \

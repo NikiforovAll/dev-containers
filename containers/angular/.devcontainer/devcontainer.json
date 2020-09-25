@@ -18,7 +18,8 @@
 		"dbaeumer.vscode-eslint",
 		"ms-vscode.vscode-typescript-tslint-plugin",
 		"eg2.vscode-npm-script",
-		"rbbit.typescript-hero"
+		"rbbit.typescript-hero",
+		"esbenp.prettier-vscode",
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [

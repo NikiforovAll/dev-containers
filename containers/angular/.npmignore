@@ -1,6 +1,7 @@
 README.md
 test-project
 .devcontainer/library-scripts
+.devcontainer/lib/
 definition-manifest.json
 .vscode
 .npmignore
