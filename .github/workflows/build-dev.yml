@@ -21,11 +21,6 @@ jobs:
       - name: Build exercism
         run: |
           docker build -f ./containers/exercism/.devcontainer/Dockerfile ./containers/angular/.devcontainer
-      # - name: Push to GitHub Packages
-      #   uses: docker/build-push-action@v1
-      #   with:
-      #     username: ${{ github.actor }}
-      #     password: ${{ secrets.GITHUB_TOKEN }}
-      #     registry: docker.pkg.github.com
-      #     repository: 
-      #     tag_with_ref: true
+      - name: Build antlr
+        run: |
+          docker build -f ./containers/antlr/.devcontainer/Dockerfile ./containers/antlr/.devcontainer

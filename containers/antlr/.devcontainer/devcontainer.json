@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/java
+{
+	"name": "NikiforovAll: ANTLR",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "11",
+			"ANTLR_VERSION": "4.6",
+			"ANTLR_TARGET": "csharp"
+		}
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"java.home": "/docker-java-home"
+	},
+	
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"mike-lischke.vscode-antlr4",
+		"ms-dotnettools.csharp",
+		"streetsidesoftware.code-spell-checker",
+	]
+}

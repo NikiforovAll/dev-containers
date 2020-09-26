@@ -28,8 +28,8 @@
 		// "arthurwang.vsc-prolog"
 	],
 	"postCreateCommand": "dotnet restore",
-	"workspaceFolder": "/home/vscode/exercism",
-	"workspaceMount": "source=${localWorkspaceFolder}/,target=/home/vscode/exercism,type=bind,consistency=cached",
+	"workspaceFolder": "/root/exercism",
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/root/exercism,type=bind,consistency=cached",
 	// ! Not supported, KNOWN_ISSUE
 	// "remoteUser": ""
 }
