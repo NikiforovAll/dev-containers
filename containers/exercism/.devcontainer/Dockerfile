@@ -17,7 +17,8 @@ RUN wget https://github.com/exercism/cli/releases/download/v3.0.5/exercism-linux
 RUN mkdir -p /home/${USERNAME}/exercism
 
 # Install prolog
-COPY library-scripts/prolog.sh /tmp/library-scripts/
-RUN /bin/bash /tmp/library-scripts/prolog.sh "stub" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" \
-    && apt-get clean -y && rm -rf /var/lib/apt/lists/* &&  rm -rf /tmp/library-scripts
+# COPY library-scripts/prolog.sh /tmp/library-scripts/
+
+# RUN /bin/bash /tmp/library-scripts/prolog.sh "stub" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" \
+#     && apt-get clean -y && rm -rf /var/lib/apt/lists/* &&  rm -rf /tmp/library-scripts
 
