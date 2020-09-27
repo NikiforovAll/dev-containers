@@ -12,7 +12,7 @@ LABEL Name=nikiforovall/devcontainers/angular \
     org.opencontainers.image.description="Base development environment for angular developer" \
     org.opencontainers.image.url=https://github.com/NikiforovAll/dev-containers.git \
     MAINTAINER=NikiforovAll \
-    VERSION=0.7.0
+    VERSION=0.8.0
 
 # Install needed packages, yarn, nvm and setup non-root user. Use a separate RUN statement to add your own dependencies.
 ARG USERNAME=node
