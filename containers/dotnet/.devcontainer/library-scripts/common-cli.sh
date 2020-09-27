@@ -5,11 +5,14 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+add-apt-repository ppa:aacebedo/fasd
+
 apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     tree \
     silversearcher-ag \
     lnav \
+    fasd \
     # procs \
     # tokei \
     # bat \

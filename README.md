@@ -91,10 +91,13 @@ https://github.com/NikiforovAll/dotfiles.git
 * Every container is based on common setup that includes:
   * themed bash, zsh. This depends on dotfiles.
   * fzf ⭐
+    * CTRL-T, CTRL-R, ALT-C
+    * fzf-extras
   * fd
   * silversearcher-ag, could be invoked as ag.
   * lnav
   * exa, aliased as ll.
+  * autosuggestions: fzf-tab | zsh-autosuggestions
 
 If you use my dotfiles, please see <https://github.com/NikiforovAll/dotfiles/tree/master/src/dev-container/shell> for more details.
 
@@ -107,6 +110,10 @@ If you use my dotfiles, please see <https://github.com/NikiforovAll/dotfiles/tre
 🚧 WIP, Tool chain could be improved based on official impl <https://github.com/NikiforovAll/vscode-dev-containers/tree/nikiforovall-dotnet/containers/nikiforovall-dotnet>
 
 > Consider to replicate dev-container definition as soon as tooling is available and it is possible to build dev-container out of definition, for now. Let's keep dev-container definition in original repo as fork.
+
+### TODO:
+
+* consider to add fasd and fzf-tab to other dev-containers. Right now, it could be found only in dotnet.
 
 ## License
 

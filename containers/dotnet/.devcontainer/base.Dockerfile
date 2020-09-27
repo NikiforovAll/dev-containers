@@ -7,7 +7,7 @@ LABEL Name=nikiforovall/devcontainers/dotnet \
     org.opencontainers.image.description="Base development environment for .NET developer" \
     org.opencontainers.image.url=https://github.com/NikiforovAll/dev-containers.git \
     MAINTAINER=NikiforovAll \
-    VERSION=1.0.0
+    VERSION=1.1.0
 
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
