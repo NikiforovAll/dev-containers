@@ -16,6 +16,7 @@ apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # procs \
     # tokei \
     # bat \
+    # ripgrep
 
 # fzf https://github.com/junegunn/fzf#key-bindings-for-command-line
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -24,6 +25,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # fd https://github.com/sharkdp/fd
 # ! This is fragile
 dpkg -i ./tmp/library-scripts/fd_8.1.1_amd64.deb
+dpkg -i ./tmp/library-scripts/bat_0.16.0_amd64.deb
+dpkg -i ./tmp/library-scripts/ripgrep_12.1.1_amd64.deb
+
 
 # Clean up
 apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts

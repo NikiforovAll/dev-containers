@@ -2,12 +2,14 @@
 ARG VARIANT="3.1"
 FROM mcr.microsoft.com/dotnet/core/sdk:${VARIANT}-bionic
 
+ENV DOTNET_NOLOGO=0
+
 LABEL Name=nikiforovall/devcontainers/dotnet \
     org.opencontainers.image.source=https://github.com/NikiforovAll/dev-containers.git\
     org.opencontainers.image.description="Base development environment for .NET developer" \
     org.opencontainers.image.url=https://github.com/NikiforovAll/dev-containers.git \
     MAINTAINER=NikiforovAll \
-    VERSION=1.1.0
+    VERSION=1.2.0
 
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
@@ -27,7 +29,7 @@ RUN bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "$
 # TODO: make sure that dotfiles could be installed both for root and vscode user
 
 COPY library-scripts/common-cli.sh /tmp/library-scripts/
-COPY lib/fd_8.1.1_amd64.deb /tmp/library-scripts
+COPY lib/* /tmp/library-scripts/
 RUN apt-get update \
     # Use Docker script from script library to set things up
     && /bin/bash /tmp/library-scripts/common-cli.sh "${INSTALL_ZSH}" \
