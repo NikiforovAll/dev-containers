@@ -12,24 +12,28 @@ apt-get update && export DEBIAN_FRONTEND=noninteractive \
     tree \
     silversearcher-ag \
     lnav \
-    fasd \
-    # procs \
-    # tokei \
-    # bat \
-    # ripgrep
+    fasd
+
+apt-get install -y --no-install-recommends -o Dpkg::Options::="--force-overwrite" \
+    fd-find \
+    bat \
+    ripgrep
+
+mkdir -p ~/.local/bin
+ln -s /bin/batcat ~/.local/bin/bat
 
 # fzf https://github.com/junegunn/fzf#key-bindings-for-command-line
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --key-bindings --completion --no-update-rc
 
 # fd https://github.com/sharkdp/fd
-dpkg -i ./tmp/library-scripts/fd_8.1.1_amd64.deb
+# dpkg -i ./tmp/library-scripts/fd_8.1.1_amd64.deb
 
-# https://github.com/sharkdp/bat
-dpkg -i ./tmp/library-scripts/bat_0.16.0_amd64.deb
+# # https://github.com/sharkdp/bat
+# dpkg -i ./tmp/library-scripts/bat_0.16.0_amd64.deb
 
-# https://github.com/BurntSushi/ripgrep
-dpkg -i ./tmp/library-scripts/ripgrep_12.1.1_amd64.deb
+# # https://github.com/BurntSushi/ripgrep
+# dpkg -i ./tmp/library-scripts/ripgrep_12.1.1_amd64.deb
 
 
 # Clean up
