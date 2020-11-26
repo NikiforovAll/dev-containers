@@ -23,9 +23,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --key-bindings --completion --no-update-rc
 
 # fd https://github.com/sharkdp/fd
-# ! This is fragile
 dpkg -i ./tmp/library-scripts/fd_8.1.1_amd64.deb
+
+# https://github.com/sharkdp/bat
 dpkg -i ./tmp/library-scripts/bat_0.16.0_amd64.deb
+
+# https://github.com/BurntSushi/ripgrep
 dpkg -i ./tmp/library-scripts/ripgrep_12.1.1_amd64.deb
 
 
