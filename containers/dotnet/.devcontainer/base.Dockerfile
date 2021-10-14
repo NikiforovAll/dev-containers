@@ -1,4 +1,4 @@
-ARG VARIANT="5.0-focal"
+ARG VARIANT="6.0"
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
 ENV DOTNET_NOLOGO=0

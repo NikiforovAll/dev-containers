@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{392DBAA5-9A61-4985-8883-82669679543A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimal-api-cookbook", "src\App\minimal-api-cookbook.csproj", "{1BD3C24D-BD43-42CF-9D10-3B7A3217E493}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BD3C24D-BD43-42CF-9D10-3B7A3217E493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD3C24D-BD43-42CF-9D10-3B7A3217E493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD3C24D-BD43-42CF-9D10-3B7A3217E493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD3C24D-BD43-42CF-9D10-3B7A3217E493}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BD3C24D-BD43-42CF-9D10-3B7A3217E493} = {392DBAA5-9A61-4985-8883-82669679543A}
+	EndGlobalSection
+EndGlobal

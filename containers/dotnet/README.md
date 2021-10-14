@@ -9,7 +9,7 @@
 | *Contributors*                    | NikiforovAll                                     |
 | *Definition type*                 | Dockerfile                                       |
 | *Published images*                | ghcr.io/nikiforovall/devcontainers/dotnet:latest |
-| *Available image variants*        | 2.1, 3.1, 5.0                                    |
+| *Available image variants*        | 2.1, 3.1, 5.0, 6.0                               |
 | *Published image architecture(s)* | x86-64                                           |
 | *Container host OS support*       | Linux                                            |
 | *Languages, platforms*            | .NET Core, C#                                    |

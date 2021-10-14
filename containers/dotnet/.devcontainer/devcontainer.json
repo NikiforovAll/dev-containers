@@ -3,7 +3,7 @@
 	"build": {
 		"dockerfile": "base.Dockerfile",
 		"args": {
-			"VARIANT": "5.0",
+			"VARIANT": "6.0",
 			// Options
 			"INSTALL_NODE": "true",
 			"NODE_VERSION": "lts/*",
@@ -11,7 +11,7 @@
 	},
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
+		"terminal.integrated.defaultProfile.linux": "/bin/bash",
 		// "terminal.integrated.shell.linux": "/bin/zsh"
 		// "terminal.integrated.shell.linux": "/bin/sh"
 	},
@@ -48,7 +48,7 @@
 	//
 	"mounts": [
 		// Add docker engine
-		"source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+		// "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
 		// "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind"
 	],
 	"remoteEnv": {
