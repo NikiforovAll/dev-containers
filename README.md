@@ -17,6 +17,23 @@ For source code, please see: [dotnet/README.md](https://github.com/NikiforovAll/
     }
 ```
 
+## 🐋 [nikiforovall/devcontainers/go](https://github.com/users/NikiforovAll/packages/container/package/devcontainers%2Fgo)
+
+Summary: .NET Core SDK, zsh + oh-my-zsh / bash.
+
+For source code, please see: [go/README.md](https://github.com/NikiforovAll/dev-containers/tree/master/containers/go)
+
+```json
+    {
+        "name": "NikiforovAll: Go dev-container",
+        "image": "nikiforovall/devcontainers-go",
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/zsh"
+        },
+        "extensions": [/*<extensionList>*/],
+    }
+```
+
 ## 🐋 [nikiforovall/devcontainers/angular](https://github.com/users/NikiforovAll/packages/container/package/devcontainers%2Fangular)
 
 Summary: Nodejs, Typescript, Angular, zsh + oh-my-zsh / bash.

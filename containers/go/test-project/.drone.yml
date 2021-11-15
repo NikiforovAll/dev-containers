@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: backend
+  image: golang:1.17
+  environment:
+    USERNAME:
+      from_secret: username
+  commands:
+  - go build
+  - go test
+  - echo $USERNAME
+  - echo $USERNAME > a.txt
+  - cat a.txt
